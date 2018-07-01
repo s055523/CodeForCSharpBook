@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmitExample", "EmitExample\EmitExample.csproj", "{114D8AA3-CBFA-4D60-B69E-72B9DD2F55B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{114D8AA3-CBFA-4D60-B69E-72B9DD2F55B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{114D8AA3-CBFA-4D60-B69E-72B9DD2F55B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{114D8AA3-CBFA-4D60-B69E-72B9DD2F55B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{114D8AA3-CBFA-4D60-B69E-72B9DD2F55B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A68CB94-10D3-4AFB-8CA2-57E6E6EA084F}
+	EndGlobalSection
+EndGlobal

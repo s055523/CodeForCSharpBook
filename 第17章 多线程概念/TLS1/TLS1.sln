@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TLS1", "TLS1\TLS1.csproj", "{ABD7DB46-9DD5-4D83-829B-A5358E36E935}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABD7DB46-9DD5-4D83-829B-A5358E36E935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABD7DB46-9DD5-4D83-829B-A5358E36E935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABD7DB46-9DD5-4D83-829B-A5358E36E935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABD7DB46-9DD5-4D83-829B-A5358E36E935}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18AD8CE2-EB5D-452E-A70F-9F64F778437D}
+	EndGlobalSection
+EndGlobal

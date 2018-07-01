@@ -1,0 +1,17 @@
+﻿<Window x:Name="wd" x:Class="LinqToRxLabWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LinqToRxLabWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="43*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="tbStatus" HorizontalAlignment="Left" Height="55" Margin="34,225,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="448" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>

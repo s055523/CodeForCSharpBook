@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncWPF", "AsyncWPF\AsyncWPF.csproj", "{82146E30-A453-44B6-9322-6ACA64E01E2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82146E30-A453-44B6-9322-6ACA64E01E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82146E30-A453-44B6-9322-6ACA64E01E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82146E30-A453-44B6-9322-6ACA64E01E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82146E30-A453-44B6-9322-6ACA64E01E2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92559AC5-150C-4EAA-A8AA-63397D3B0AB9}
+	EndGlobalSection
+EndGlobal
