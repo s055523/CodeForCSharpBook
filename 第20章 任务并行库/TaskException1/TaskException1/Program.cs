@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace TaskException1
         {
             Demo1();
             Demo2();
+            Console.ReadKey();
         }
 
         static void Demo2()
@@ -32,8 +34,6 @@ namespace TaskException1
                     }
                 }
             });
-            
-            Console.ReadKey();
         }
 
         static void Demo1()
@@ -60,7 +60,6 @@ namespace TaskException1
                 //捕获不到
                 Console.WriteLine("ex");
             }
-            Console.ReadKey();
         }
     }
 }
