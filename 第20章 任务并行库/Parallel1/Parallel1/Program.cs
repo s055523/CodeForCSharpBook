@@ -20,10 +20,10 @@ namespace Parallel1
             var sw = new Stopwatch();
             sw.Start();
 
-            //使用TPL
+            //使用并行
             Parallel.Invoke(Task1, Task2, Task3);
             var time = sw.ElapsedMilliseconds;
-            Console.WriteLine("使用TPL:" + time);
+            Console.WriteLine("使用并行:" + time);
 
             sw.Restart();
 
@@ -32,22 +32,22 @@ namespace Parallel1
             Task2();
             Task3();
             time = sw.ElapsedMilliseconds;
-            Console.WriteLine("不使用TPL:" + time);
+            Console.WriteLine("不使用并行:" + time);
 
             Console.ReadKey();
         }
 
         static void Task1()
         {
-            Thread.Sleep(10);
+            Thread.Sleep(1000);
         }
         static void Task2()
         {
-            Thread.Sleep(8);
+            Thread.Sleep(800);
         }
         static void Task3()
         {
-            Thread.Sleep(12);
+            Thread.Sleep(1200);
         }
 
     }
