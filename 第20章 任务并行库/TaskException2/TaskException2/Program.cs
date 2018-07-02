@@ -36,11 +36,11 @@ namespace TaskException2
                 var childTask1 = new Task(() =>
                 {
                     throw new DivideByZeroException();
-                });
+                }, TaskCreationOptions.AttachedToParent);
                 var childTask2 = new Task(() =>
                 {
                     throw new InvalidCastException();
-                });
+                }, TaskCreationOptions.AttachedToParent);
                 childTask1.Start();
                 childTask2.Start();
             });
