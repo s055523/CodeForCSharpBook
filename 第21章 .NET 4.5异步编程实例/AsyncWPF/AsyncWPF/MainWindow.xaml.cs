@@ -160,6 +160,7 @@ namespace AsyncWPF
                 btnTest2.IsEnabled = false;
                 btnCancel.IsEnabled = true;
                 pb.Value = 0;
+                tbStatus.Text = string.Empty;
 
                 var task1 = Task.Run(() => IsPrimeLow(10, progress, cts.Token));
                 var task2 = Task.Run(() => IsPrimeLow(100, progress, cts.Token));
