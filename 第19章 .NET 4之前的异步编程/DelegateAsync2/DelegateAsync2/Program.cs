@@ -35,33 +35,19 @@ namespace DelegateAsync2
         public delegate bool IsPrimeSlowDelegate(int number, CancellationToken token);
 
         private static bool IsPrimeSlow(int number, CancellationToken token)
-        {            
-            try
-            {
-                if (number <= 0) throw new Exception("输入必须大于0");
-                if (number == 1) throw new Exception("1不是质数也不是合数");
+        {
+            if (number <= 0) throw new Exception("输入必须大于0");
+            if (number == 1) throw new Exception("1不是质数也不是合数");
 
-                for (var i = 2; i < number; i++)
+            for (var i = 2; i < number; i++)
+            {
+                token.ThrowIfCancellationRequested();
+                if (number % i == 0)
                 {
-                    token.ThrowIfCancellationRequested();
-                    if (number % i == 0)
-                    {
-                        return false;
-                    }
+                    return false;
                 }
-                return true;
             }
-            catch (OperationCanceledException ex)
-            {
-                //用户手动取消
-                Console.WriteLine("任务取消！");
-            }
-            catch (Exception ex)
-            {
-                //来自代码的异常，例如输入了0或1
-                Console.WriteLine(ex.ToString());
-            }
-            return false;
+            return true;
         }
 
         //回调函数
@@ -75,11 +61,22 @@ namespace DelegateAsync2
             //AsyncDelegate的输入已经在主线程中定义好了，现在只需要调用EndInvoke，而调用EndInvoke需要对应类型的委托的一个实例，故新建一个
             var ba = (IsPrimeSlowDelegate)ar.AsyncDelegate;
 
-
-            //获得结果，这里不会阻塞
-            Console.WriteLine("结果为" + ba.EndInvoke(iar));
-            Console.WriteLine("任务成功完成！");
-
+            try
+            {
+                //获得结果，这里不会阻塞
+                Console.WriteLine(ba.EndInvoke(iar));
+                Console.WriteLine("任务成功完成！");
+            }
+            catch (OperationCanceledException ex)
+            {
+                //捕捉到异常
+                Console.WriteLine("任务取消！");
+            }
+            catch(Exception ex)
+            {
+                //其他异常，来自代码，例如传入了0或1
+                Console.WriteLine("其他异常");
+            }
         }
     }
 }
