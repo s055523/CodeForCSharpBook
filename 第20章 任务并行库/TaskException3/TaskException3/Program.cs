@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace TaskException3
@@ -23,7 +20,7 @@ namespace TaskException3
                     catch (Exception e)
                     {
                         //就地处理异常
-                        Console.WriteLine(e.Message);
+                        Console.WriteLine("子任务1的异常被就地处理:" + e.Message);
                     }
                 });
                 var childTask2 = Task.Run(() =>
@@ -31,6 +28,7 @@ namespace TaskException3
                     Console.WriteLine("childTask2");
                     throw new InvalidCastException();
                 });
+                //将子任务的异常上升到父任务
                 childTask2.Wait();
             });
 
@@ -38,14 +36,14 @@ namespace TaskException3
             task.ContinueWith(t =>
             {
                 //Faulted
-                Console.WriteLine(t.Status);
+                Console.WriteLine("父任务的状态：" + t.Status);
 
                 //子任务的异常上升到父任务
                 if (t.Status == TaskStatus.Faulted)
                 {
                     foreach (var ex in t.Exception.Flatten().InnerExceptions)
                     {
-                        Console.WriteLine(ex);
+                        Console.WriteLine("这里有一条来自子任务2的异常：" + ex);
                     }
                 }
             });
