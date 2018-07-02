@@ -28,7 +28,7 @@ namespace Parallel2
             }
 
             var time = sw.ElapsedMilliseconds;
-            Console.WriteLine("不使用TPL:" + time);
+            Console.WriteLine("不使用并行:" + time);
             Console.WriteLine("质数的个数:" + count1);
 
             sw.Restart();
@@ -43,7 +43,7 @@ namespace Parallel2
             });
 
             time = sw.ElapsedMilliseconds;
-            Console.WriteLine("使用TPL:" + time);
+            Console.WriteLine("使用并行:" + time);
             Console.WriteLine("质数的个数:" + count2);
 
             Parallel.ForEach(Partitioner.Create(2, 1000000),
