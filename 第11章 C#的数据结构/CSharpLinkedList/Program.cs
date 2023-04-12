@@ -177,7 +177,7 @@ namespace CSharpLinkedList
         //在某个节点前面插入一个值
         public void AddBefore(CSharpLinkedListNode<T> node, CSharpLinkedListNode<T> newNode)
         {
-            InsertNodeBefore(node, node);
+            InsertNodeBefore(node, newNode);
 
             //设置头节点
             if (node == head)
